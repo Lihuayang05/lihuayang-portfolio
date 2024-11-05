@@ -1,0 +1,789 @@
+/* appling google font over the website  */
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+/* styling menu icon */
+.nav-menu {
+    border: none;
+    background-color: #fff;
+    font-size: 1.5rem;
+    color: #fca61f;
+}
+/* Ensure proper alignment on smaller screens */
+.navbar .navbar-toggler {
+    margin-left: auto;
+  }
+  
+  /* For mid-sized screens (768-999px) */
+  @media (min-width: 768px) and (max-width: 999px) {
+    .navbar-nav {
+      justify-content: flex-end; /* Ensures nav items align to the right */
+    }
+  }
+  
+/* Ensure navbar stays on top */
+#navbar-top {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    background-color: white; 
+}
+
+/* Adjusting navbar padding */
+.navbar {
+    padding: 0.5rem 1rem; 
+}
+
+
+body {
+    padding-top: 80px;
+}
+
+/* Main content styles */
+.main-content {
+    min-height: calc(100vh - 80px);
+}
+
+/* Styling navbar links */
+.navbar-nav a {
+    color: black;
+    position: relative;
+}
+
+.navbar-nav a:hover {
+    color: #fca61f;
+}
+
+.navbar-nav a:after {
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fca61f;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    bottom: -5px; /* Adjusted position for underline effect */
+}
+
+.navbar-nav a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+  /* styling contact btn  */
+ .c-btn {
+    border: none;
+    background: #fca61f; /* Button color */
+    color: #fff; /* Text color */
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Hover effect */
+.c-btn:hover {
+    transform: scale(1.1); /* Grows the button slightly */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
+}
+/* Remove underline from anchor tags */
+a {
+    text-decoration: none;
+}
+
+/* styling home section starts */
+.home{
+    background: linear-gradient(33deg, rgba(242,242,255,1) 0%, rgba(235,249,255,1) 100%);
+    padding: 30px 0px 10px 0px;
+}
+.home h2{
+    font-size: 3rem;
+    line-height: 4rem;
+}
+.c-orange{
+    color: #6f34fe;
+    font-weight: 700;
+    font-size: 4rem;
+}
+.home p{
+    width: fit-content;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+.h-btn:hover{
+    background: #6f34fe;
+    color: #fff;
+    transform: translateY(-20px);
+    transition-duration: 1s;
+}
+.link{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fca61f;
+    position: relative;
+}
+.link::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    top: 20px;
+    background-color: #6f34fe;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.link:hover{
+    color: #6f34fe;
+}
+.link:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* updated photo-container */
+.photo-container {
+    width: 450px; 
+    height: 450px;
+    margin: 200px auto 0 auto; 
+    overflow: hidden;
+    border-radius: 50%; 
+    border: 2px solid #e5f1ff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; 
+}
+
+/* Style the image inside the photo container */
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Subtle hover effect for photo */
+.photo-container:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); 
+}
+
+.photo-container:hover img {
+    transform: scale(1.1); 
+}
+
+  .skills-list {
+    padding: 0;
+  }
+
+  .skill-item {
+    background-color: #3f396d;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+  }
+
+  .skill-item:hover {
+    transform: scale(1.1);
+  }
+/* Name styling */
+.typewriter-name {
+    color: #6f34fe;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+/* Fade-out effect for the cursor */
+.fade-cursor {
+    animation: pause 0.1s forwards; 
+}
+
+/* About Me section starts */
+.about {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 40px 0; 
+    flex-wrap: wrap; 
+}
+
+.about-text {
+    flex: 1; 
+    padding-left: 50px;
+    max-width: 600px; 
+    box-sizing: border-box;
+}
+
+.about-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.about-img img {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+    border-radius: 20px;
+    object-fit: cover; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column; 
+        text-align: center; /* Center align text for mobile */
+    }
+    
+    .about-text {
+        padding-left: 0; 
+        margin-bottom: 30px;
+        max-width: 100%; /* Allow full width on mobile */
+    }
+
+    .about-img {
+        max-width: 100%; /* Ensure image is responsive */
+    }
+
+    .about-img img {
+        max-width: 90%; 
+        height: auto; /* Maintain aspect ratio on smaller screens */
+    }
+
+    .text-muted {
+        margin-top: 20px; 
+        font-size: 1rem; /* Smaller font size for mobile */
+        margin-left: 0; /* Center alignment */
+        width: auto; /* Allow width to adjust based on content */
+        text-align: center; /* Center text on smaller screens */
+    }
+}
+.fade {
+    transition: opacity .15s linear;
+}
+.fade:not(.show) {
+    opacity: 0;
+}
+.modal.fade .modal-dialog {
+    transition: transform .3s ease-out;
+    transform: translate(0, -50px);
+}
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: var(--bs-modal-margin);
+    pointer-events: none;
+}
+
+/* Common styles */
+h5 {
+    font-weight: bold;
+}
+
+/* Timeline item styles */
+.timeline-item {
+    display: flex; 
+    align-items: flex-start; /* Align items at the start to allow for vertical adjustments */
+    margin-bottom: 20px;
+}
+
+/* Style for the timeline dot */
+.timeline-dot {
+    width: 3vw; /* Responsive size */
+    height: 3vw; /* Responsive size */
+    max-width: 15px; /* Limit maximum size */
+    max-height: 15px; /* Limit maximum size */
+    background-color: #fca61f;
+    border-radius: 50%; 
+    margin-right: 15px; /* Space between dot and content */
+    position: relative; 
+    /* Adjust vertical positioning */
+    transform: translateY(20px); 
+}
+
+/* Content of each timeline item */
+.timeline-content {
+    flex-grow: 1; 
+    text-align: left; 
+    margin-left: 10px;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+    
+    .timeline-dot {
+        margin-bottom: 10px; 
+        transform: translateY(0);
+    }
+
+    .timeline-content {
+        text-align: center;
+        margin-left: 0; 
+    }
+}
+
+
+/* Container for the image carousel */
+.image-collage {
+    position: relative;
+    width: 100%;
+    height: 450px; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for each image in the carousel */
+.img-collage-item {
+    position: absolute;
+    width: 180px; 
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; 
+    animation: collageCarousel 10s infinite ease-in-out;
+}
+
+/* Specific positions for each image to slightly overlap */
+.img-collage-item:nth-child(1) { top: 10px; left: 10px; }
+.img-collage-item:nth-child(2) { top: 30px; left: 20px; }
+.img-collage-item:nth-child(3) { top: 50px; left: 30px; }
+.img-collage-item:nth-child(4) { top: 70px; left: 40px; }
+.img-collage-item:nth-child(5) { top: 90px; left: 50px; }
+
+/* Keyframes for carousel animation */
+@keyframes collageCarousel {
+    0%, 20% { opacity: 1; transform: translateY(0); }
+    20%, 40% { opacity: 1; transform: translateY(-100px); }
+    40%, 60% { opacity: 1; transform: translateY(-200px); }
+    60%, 80% { opacity: 1; transform: translateY(-300px); }
+    80%, 100% { opacity: 1; transform: translateY(-400px); }
+}
+
+/* Center the carousel */
+.carousel-custom {
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+/* Adjust the carousel images */
+.carousel-image {
+    width: 400px; 
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
+/* Make the carousel controls less obvious */
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.3); 
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0.5; 
+}
+
+/* Hover effect */
+.img-collage-item:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
+}
+
+/* Ensure the muted text doesn't overflow */
+.text-muted {
+    font-size: 1.2rem; 
+    text-align: left;  
+    width: 100%; /* Use full width */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .text-muted {
+        font-size: 1rem; /* Smaller font size for mobile */
+        margin-left: 0; /* Center alignment */
+        text-align: center; /* Center text */
+    }
+}
+
+/* About Me section ends here */
+
+/* Expertise section heading */
+.heading small {
+    color: #8b5bfa;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.heading h3 {
+    margin-top: 0.5rem;
+    color: #5541ea;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Expertise section content */
+.expertise {
+    background-color: #f2f2ff;
+    padding: 40px 0; 
+}
+
+.expertise h4 {
+    color: #fca61f; 
+    font-weight: 700;
+    font-size: 1.8rem; 
+    padding: 0 15px; 
+    margin-top: 20px; 
+}
+
+.expertise a {
+    text-decoration: none;
+    color: #fca61f;
+    font-size: 1.2rem; 
+    padding: 0 15px; 
+}
+
+.expertise a:hover {
+    color: #6f34fe; 
+}
+
+.expertise .service-card {
+    text-align: center;
+    padding: 15px;
+    border-radius: 0.7rem;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin: 15px; 
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+/* Carousel customization */
+.carousel-inner img {
+    width: 100%; 
+    height: 300px; 
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #6f34fe;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/*expertise section ends here*/
+
+/* portfolio section starts */
+.filter-item.active {
+    color: #fca61f; /* Change color as desired */
+    font-weight: bold;
+  }
+  
+#myBtnContainer{
+    margin-bottom: 45px;
+}
+#myBtnContainer button{
+  border: none;
+  color: black;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;   
+  display: inline-block;
+  margin: 0 25px;
+}
+#myBtnContainer button:hover{
+    color: #fca61f;
+}
+
+#myBtnContainer button:focus{
+    outline: none;
+}
+.post .content h4{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.post .card{
+    border: none;
+}
+
+/* blog section starts */
+.blog .blogpost .card {
+    border: none;
+    border-radius: 5%;
+}
+
+/* Ensures all images have the same height */
+.blogpost img {
+    height: 360px; 
+    object-fit: cover; 
+}
+
+/* More Button Styling */
+.more-btn {
+    display: inline-block; 
+    background-color: transparent; 
+    color: #fca61f; 
+    font-size: 1.2rem; 
+    padding: 10px 30px; 
+    text-decoration: none; 
+    border: 2px solid #fca61f; 
+    border-radius: 50px; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.more-btn:hover {
+    background-color: #fca61f;
+    color: white; 
+}
+
+.blog{
+    background-color: #f2f2ff;
+}
+.blog .blogpost .card{
+    border: none;
+    border-radius: 5%;
+}
+.nav-bg{
+    background-color: #fff;
+}
+
+.blog .blogpost small{
+    color: #6f34fe;
+    font-size: 1.1rem;
+}
+.blog .blogpost h4,.blogpost a{
+    color: #3f396d;
+    font-weight: 700;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+.blogpost a:hover{
+    color: #fca61f;
+}
+.blog .blogpost .read-more-btn{
+    text-decoration: none;
+    color: #fca61f;
+    font-size: 1.1rem;
+}
+.blog .blogpost .read-more-btn:hover{
+    color: #6f34fe;
+}
+/* styling modal group  */
+.btn-c{
+    margin-left: 94%;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    margin-top: -3%;
+}
+.btn-c i{
+    color: #fca61f;
+}
+.modal-body .content span{
+    font-size: 1rem;
+}
+.modal-body .content small{
+    font-size: 1rem;
+    color: #6f34fe;
+}
+/* contact section starts */
+.contact{
+    background-color: #f3f3f3;
+}
+.contact-details i{
+    font-size: 1.5rem;
+    color: #fca61f;
+}
+.contact-details p{
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+.contact-form .form-control:focus{
+    box-shadow: none;
+    border: 1px solid #fca61f;
+}
+.contact-form .form-control{
+    padding: 10px 10px;
+    width: 80%;
+}
+
+/* Ensure html and body have no margin or padding */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure full height and remove default margin */
+html, body {
+    height: 100%; 
+    margin: 0;
+    padding: 0; 
+}
+html, .navbar {
+    overflow-x: hidden; /* Prevents overflow causing empty space */
+  }
+  
+  .navbar-collapse {
+    margin: 0;
+    padding: 0;
+  }
+  
+/* Flexbox layout for body */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content area */
+.main-content {
+    flex: 1; 
+    min-height: calc(100vh - 100px); 
+}
+
+/* Footer Section */
+footer {
+    background-color: #211e39; 
+    width: 100%; 
+    padding: 20px 0; 
+    box-sizing: border-box;
+    position: relative; 
+    margin: 0; 
+}
+
+/* Link Group Styling */
+footer .link-group {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    margin-bottom: 10px; 
+}
+
+footer .link-group a {
+    margin: 0 10px; 
+    text-decoration: none;
+    color: #6c757d; 
+    font-size: 1.1rem; 
+}
+
+footer .link-group a:hover {
+    color: #fca61f;
+}
+
+/* Social Links Styling */
+.social-links {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 1rem; 
+}
+
+.social-links a {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin-right: 1rem;
+    font-size: 1.5rem; 
+    padding: 14px; 
+    border-radius: 50%;
+    background-color: #fff; 
+    transition: background-color 0.3s, transform 0.3s; 
+    width: 50px; 
+    height: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+}
+
+/* Center icon in social links */
+.social-links a i {
+    line-height: 1; 
+}
+
+/* LinkedIn Button */
+.social-links a.linkedin {
+    color: #1938e5;
+}
+
+.social-links a.linkedin:hover {
+    background-color: #1938e5; 
+    color: #fff; 
+    transform: translateY(-5px); 
+}
+
+/* WhatsApp Button */
+.social-links a.whatsapp {
+    color: #25D366;
+}
+
+.social-links a.whatsapp:hover {
+    background-color: #25D366; 
+    color: #fff;
+    transform: translateY(-5px); 
+}
+
+/* Back to Top Button */
+#btn-back-to-top {
+    position: fixed; 
+    bottom: 40px;
+    right: 40px; 
+    display: none; 
+    font-size: 1.4rem; 
+    background-color: #fca61f; 
+    color: #fff; 
+    animation: pulse 3s infinite; 
+}
+
+.atticus-fix1 {
+    margin-top: 80px;
+}
+
+@media (min-width: 999px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+}
+@media (min-width: 998px) {
+    .atticus-fix2 {
+        display: block !important;
+    }
+}
+@media (max-width: 997px) {
+    .atticus-fix3 {
+        display: block !important;
+    }
+}
+
+  
+  
