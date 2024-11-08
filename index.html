@@ -866,6 +866,73 @@
     </script>
     <!-- custom js file linking -->
     <script src="js/script.js"></script>
+    <style>
+      body {
+        cursor: none; /* Hide the default mouse cursor */
+      }
+      .navbar{
+        cursor:none;
+      }
+      /* Circle base style */
+      .circle {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        pointer-events: none; /* So the circles don’t interfere with clicks */
+        opacity: 0.8;
+        transition: transform 0.15s ease-out, opacity 0.3s ease-out; /* Added transition for smoother opacity */
+        box-shadow: 0 0 10px rgba(255, 140, 140, 0.7), 0 0 20px rgba(255, 140, 140, 0.5); /* Glowing effect */
+      }
+    </style>
+  </head>
+  <body>
+  
+    <!-- More circles for smoother trailing and glowing effect -->
+    <div class="circle" style="background-color: rgb(0, 126, 255);"></div>    <!-- Bright Blue -->
+    <div class="circle" style="background-color: rgb(77, 108, 255);"></div>   <!-- Mid Blue -->
+    <div class="circle" style="background-color: rgb(128, 92, 255);"></div>   <!-- Blue-Violet -->
+    <div class="circle" style="background-color: rgb(153, 87, 255);"></div>   <!-- Light Purple -->
+    <div class="circle" style="background-color: rgb(178, 77, 255);"></div>   <!-- Lilac -->
+    <div class="circle" style="background-color: rgb(202, 64, 255);"></div>   <!-- Purple -->
+    <div class="circle" style="background-color: rgb(217, 77, 255);"></div>   <!-- Pinkish Purple -->
+    <div class="circle" style="background-color: rgb(230, 102, 255);"></div>  <!-- Soft Pinkish Purple -->
+    <div class="circle" style="background-color: rgb(242, 128, 255);"></div>  <!-- Light Pink-Purple -->
+    <div class="circle" style="background-color: rgb(255, 153, 255);"></div>  <!-- Pinkish -->
+    <div class="circle" style="background-color: rgb(255, 178, 242);"></div>  <!-- Light Pink -->
+    <div class="circle" style="background-color: rgb(255, 204, 230);"></div>  <!-- Soft Pink -->
+    <div class="circle" style="background-color: rgb(255, 229, 245);"></div>  <!-- Very Light Pink -->
     
+
+  
+    <script>
+      const circles = Array.from(document.querySelectorAll('.circle'));
+      let mouseX = 0, mouseY = 0;
+      const circlePositions = circles.map(() => ({ x: 0, y: 0 }));
+  
+      // Update mouse position on mousemove
+      document.addEventListener('mousemove', (event) => {
+        mouseX = event.pageX;
+        mouseY = event.pageY;
+      });
+  
+      function animateCircles() {
+        // Move each circle closer to the current mouse position with a slight delay
+        circlePositions.forEach((pos, index) => {
+          // Each circle moves slightly slower based on its index, creating a trailing effect
+          pos.x += (mouseX - pos.x) * (0.07 + index * 0.01); // Slower and smaller movement factor for smoothness
+          pos.y += (mouseY - pos.y) * (0.07 + index * 0.01);
+  
+          // Apply the updated position, scale, and opacity to each circle
+          circles[index].style.transform = `translate(${pos.x}px, ${pos.y}px) scale(${1 - index * 0.05})`;
+          circles[index].style.opacity = `${0.8 - index * 0.05}`; // subtle opacity gradient
+        });
+  
+        requestAnimationFrame(animateCircles); // Smoothly updates each frame
+      }
+  
+      // Start the animation loop
+      animateCircles();
+    </script>
   </body>
 </html>
